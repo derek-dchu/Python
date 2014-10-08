@@ -7,7 +7,7 @@ def swap(arr, i1, i2):
 	arr[i1], arr[i2] = arr[i2], arr[i1]
 
 def partition(arr, first, last):
-	pivot = int((first + last) / 2)
+	pivot = first + int((last - first) / 2)
 	swap(arr, first, pivot)
 	left = first + 1
 	right = last
