@@ -21,11 +21,15 @@ class TestSolution(unittest.TestCase):
         return test
 
     def setUp(self):
-        self.solution = Solution()
+        self.hashtable = Solution.hashtable
+        self.majority_voting = Solution.Boyer_Moore_Majority_Voting
         self.test = self.array_generator(100)
 
-    def test_solution(self):
-        self.assertEqual(self.solution.majorityElement(self.test), 0)
+    def test_hashtable(self):
+        self.assertEqual(self.hashtable(self.test), 0)
+
+    def test_majority_voting(self):
+        self.assertEqual(self.majority_voting(self.test), 0)
 
 
 if __name__ == '__main__':
