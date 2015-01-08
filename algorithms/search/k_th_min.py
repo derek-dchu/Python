@@ -4,9 +4,12 @@ class k_th_min:
     """
     This method returns the kth smallest item in the array
 
-    :param iterable: array of items
-    :param k: 
-    :return: item
+    Args:
+        iterable: an iterable object
+        k: the kth smallest 
+
+    Returns:
+        The kth smallest item
     """
     # O(n log n), sort the array and return the kth item
     @staticmethod

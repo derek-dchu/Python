@@ -6,10 +6,13 @@ def median_of_medians(iterable, left=None, right=None):
     """
     This method returns an approximate median using the median of medians algorithm
 
-    :param: iterable    iterable data
-    :param: left        left index
-    :param: right       right index
-    :return: a element of iterable data
+    Args:
+        iterable: an iterable object
+        left:     The beginning index of iterable
+        right:    The ending index of iterable
+    
+    Returns:
+        an element which is the approximate median of iterable
     """
     if iterable is None:
         raise ValueError("The iterable is empty")
