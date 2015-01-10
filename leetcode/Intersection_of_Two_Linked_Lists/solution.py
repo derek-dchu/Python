@@ -14,7 +14,8 @@ class Solution:
         """
         looking for the node at which the Intersection of two singly linked lists begins
 
-        :returns: ListNode
+        Returns:
+            ListNode
         """
 
         if headA is None or headB is None:

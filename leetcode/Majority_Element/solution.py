@@ -4,8 +4,11 @@ class Solution:
         """
         Find the element that appears more the n/2 times
 
-        :param: num, a list of integers
-        :return: an integer
+        Args:
+            num: a list of integers
+        
+        Returns:
+            an integer
         """
         if len(num) == 1:
             return num[0]

@@ -9,8 +9,12 @@ class MinStack:
     def push(self, x):
         """
         Push element x onto stack.
-        :param x: pushed element
-        :return: pushed element
+
+        Args:
+            x: pushed element
+
+        Returns:
+            pushed element
         """
         if len(self.data) == 0 or x < self.min:
             self.min = x
@@ -21,7 +25,9 @@ class MinStack:
     def pop(self):
         """
         Removes the element on top of the stack
-        :return: top element
+
+        Returns:
+            top element
         """
 
         if len(self.data) == 0:

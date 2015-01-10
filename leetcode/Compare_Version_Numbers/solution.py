@@ -3,9 +3,12 @@ class Solution:
         """
         Compare two version numbers version1 and versoin2. If version1 > version2 return 1, if version1 < version2 return -1, otherwise return 0.
 
-    	:param: version1, a string
-        :param: version2, a string
-        :return: an integer
+        Args:
+            version1: a string as a version
+            version2: a string as a version
+        
+        Returns:
+            an integer
         """
         version_numbers1 = version1.split('.')
         version_numbers2 = version2.split('.')
