@@ -1,3 +1,4 @@
+import time
 from random import randint
 
 def swap(iterable, a, b):
@@ -15,6 +16,11 @@ def partition(iterable, left, right):
     swap(iterable, storeIndex, right)
     return storeIndex
 
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
 # Test
 def random_list_gen(num):
     iterable = []
@@ -27,3 +33,21 @@ def is_sorted(iterable):
         if (iterable[i-1] > iterable[i]):
             return False
     return True
+
+
+class Timer(object):
+    def __init__(self, verbose=False):
+        self.verbose = verbose
+
+    def __enter__(self):
+        self.start = time.time()
+        return self
+
+    def __exit__(self, *args):
+        self.end = time.time()
+        self.secs = self.end - self.start
+        self.msecs = self.secs * 1000  # millisecs
+        if self.verbose:
+            print('elapsed time: %f ms' % self.msecs)
+
+            
